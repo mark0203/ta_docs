@@ -72,6 +72,9 @@ Just remember to use `pnpm` instead of `npm` for every installation part in the 
   * `npm run cypress:open`
 
 # Examples
+* [Cypress.io docs - Introduction](https://docs.cypress.io/guides/core-concepts/introduction-To-Cypress)
+* [Cypress.io docs - Get](https://docs.cypress.io/api/commands/get)
+* [Cypress.io docs - Writing and organizing tests](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests)
 
 ## E2E testing
 
