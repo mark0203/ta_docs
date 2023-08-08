@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^12.17.3"
+    "cypress": "^12.17.3",
+    "typescript": "^5.1.6"
   },
   "name": "ta_docs",
   "description": "This repo is used to document a bunch of test automation tools.\r The documentation is written in such a way anyone should be able to follow it.\r From installation to usage. Links to the original documentation. \r And even example code to test against (if needed).",
