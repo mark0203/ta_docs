@@ -14,7 +14,8 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
         * Installation will take quiet a bit longer
 * pnpm [installation](https://pnpm.io/installation)
     * Not mandatory but...
-    * When using npm, if you have 100 projects using a dependency, you will have 100 copies of that dependency saved on disk. With pnpm, the dependency will be stored in a content-addressable store
+    * When using npm, if you have 100 projects using a dependency, you will have 100 copies of that dependency saved on
+      disk. With pnpm, the dependency will be stored in a content-addressable store
 * Cypress: Open a terminal - `pnpm install cypress --save-dev`
 
 # Init and first run
@@ -35,7 +36,8 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
             * We choose `Create new spec`
                 * Give it a name e.g. `my-first-spec`
                   Hit `Okay, run the spec` and see the magic
-            * But to get familiar repeat this workshop in another empty propject and select the other option to see what will happen
+            * But to get familiar repeat this workshop in another empty propject and select the other option to see what
+              will happen
 
 # Usage & What's next
 
@@ -50,12 +52,16 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 * Go over the best [practices page](https://docs.cypress.io/guides/references/best-practices)
 
 # Typescript
-Javascript is al fine, but what about using typescript? No problem, follow the steps below to install and configure Typescript.
+
+Javascript is al fine, but what about using typescript? No problem, follow the steps below to install and configure
+Typescript.
 Just remember to use `pnpm` instead of `npm` for every installation part in the documentation.
+
 * [Cypress.io docs - Typescript](https://docs.cypress.io/guides/tooling/typescript-support)
 * `pnpm install --save-dev typescript`
 * Inside the `cypress` folder, add a file `tsconfig.json` with the following configuration
-```javascript
+
+```typescript
 {
   "compilerOptions": {
     "target": "es5",
@@ -65,13 +71,49 @@ Just remember to use `pnpm` instead of `npm` for every installation part in the 
   "include": ["**/*.ts"]
 }
 ```
+
 * Rename the e2e spec from `*.cy.js` to `*.cy.ts`
 * Rename the support files to `*.ts` files
 * Rename `cypress.config.js` to `cypress.config.ts`
 * Run cypress to make sure it all works as expected
-  * `npm run cypress:open`
+    * `npm run cypress:open`
 
-# Examples
+# Tags
+
+If you want to include/exclude specific features/tests from a run, it might be handy to add tags.
+
+* https://github.com/infosum/cypress-tags
+* [Cypress Tags - Readme](https://github.com/infosum/cypress-tags/blob/master/README.md)
+* `pnpm install cypress-tags`
+* Update `cypress.config.ts` to:
+
+```typescript
+import { defineConfig } from 'cypress';
+import { tagify } from 'cypress-tags';
+
+export default defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      config.env.CYPRESS_INCLUDE_TAGS = 'all';
+      config.env.CYPRESS_EXCLUDE_TAGS = 'two,three';
+
+      on('file:preprocessor', tagify(config));
+    },
+    baseUrl: 'https://example.cypress.io',
+  },
+});
+```
+
+* Add `cypress-tags` to `tsconfig.json` types
+* Update your test file with
+
+```typescript
+describe('all', 'template spec', () => {
+  it('one', 'passes', () => {
+```
+
+# Cypress Examples
+
 * [Cypress.io docs - Introduction](https://docs.cypress.io/guides/core-concepts/introduction-To-Cypress)
 * [Cypress.io docs - Get](https://docs.cypress.io/api/commands/get)
 * [Cypress.io docs - Writing and organizing tests](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests)
@@ -87,9 +129,12 @@ Just remember to use `pnpm` instead of `npm` for every installation part in the 
         * [Visual testing plugins](https://docs.cypress.io/plugins#visual-testing)
 
 #### Best option:
+
 * https://github.com/Andremoniy/cypress-visual-regression-resemble-js
     * Issue: https://github.com/Andremoniy/cypress-visual-regression-resemble-js/issues/18
+
 #### Second best option:
+
 * https://github.com/FRSOURCE/cypress-plugin-visual-regression-diff
     * Install: `pnpm add -D @frsource/cypress-plugin-visual-regression-diff`
 

@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/mark0203/ta_docs/issues"
   },
-  "homepage": "https://github.com/mark0203/ta_docs#readme"
+  "homepage": "https://github.com/mark0203/ta_docs#readme",
+  "dependencies": {
+    "cypress-tags": "^1.1.2"
+  }
 }
