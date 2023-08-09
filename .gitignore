@@ -2,3 +2,4 @@
 /shelf/
 .idea
 node_modules
+cypress/videos/
