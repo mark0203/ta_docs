@@ -1,0 +1,11 @@
+{
+  "tags": {
+    "include": {
+      "type": "group",
+      "values": [
+        "smoke",
+        "regression"
+      ]
+    }
+  }
+}

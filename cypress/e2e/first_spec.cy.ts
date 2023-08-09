@@ -1,11 +1,11 @@
-describe(['all']. 'template spec', () => {
-  it(['test1'], 'passes', () => {
+describe('template spec', () => {
+  it('passes', () => {
     cy.visit('/')
   })
-  it(['test2']. 'passes 2', () => {
+  it('passes 2', () => {
     cy.visit('/commands/querying')
   })
-  it(['test3'], 'passes 3', () => {
+  it('passes 3', { tags: 'smoke' }, () => {
     cy.visit('/commands/assertions')
   })
 })
