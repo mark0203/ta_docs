@@ -112,6 +112,31 @@ describe('all', 'template spec', () => {
   it('one', 'passes', () => {
 ```
 
+# Performance tests
+
+## Lighthouse
+
+* [Cypress Lighthouse - installation guide](https://mfrachet.github.io/cypress-audit/guides/lighthouse/installation.html)
+* `pnpm install --save-dev @cypress-audit/lighthouse`
+* in `cypress.config.ts` add
+
+```Typescript
+import { lighthouse, prepareAudit } from "@cypress-audit/lighthouse";
+...
+...
+...
+setupNodeEvents(on, config) {
+      on("before:browser:launch", (browser = {}, launchOptions) => {
+        prepareAudit(launchOptions);
+      });
+
+      on("task", {
+        lighthouse: lighthouse(),
+      });
+```
+
+* In `cypress/support/commands.ts` add `import "@cypress-audit/lighthouse/commands";`
+
 # Cypress Examples
 
 * [Cypress.io docs - Introduction](https://docs.cypress.io/guides/core-concepts/introduction-To-Cypress)
