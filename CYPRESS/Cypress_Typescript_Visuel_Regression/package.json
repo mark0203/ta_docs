@@ -1,7 +1,7 @@
 {
   "devDependencies": {
+    "@frsource/cypress-plugin-visual-regression-diff": "^3.3.10",
     "cypress": "^12.17.3",
-    "cypress-tags": "^1.1.2",
     "typescript": "^5.1.6"
   },
   "name": "ta_docs",
