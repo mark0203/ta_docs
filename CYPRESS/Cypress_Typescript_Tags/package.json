@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "cypress": "^12.17.3",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "cypress-tags": "^1.1.2"
   },
   "name": "ta_docs",
   "description": "This repo is used to document a bunch of test automation tools.\r The documentation is written in such a way anyone should be able to follow it.\r From installation to usage. Links to the original documentation. \r And even example code to test against (if needed).",
@@ -20,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/mark0203/ta_docs/issues"
   },
-  "homepage": "https://github.com/mark0203/ta_docs#readme",
-  "dependencies": {
-    "cypress-tags": "^1.1.2"
-  }
+  "homepage": "https://github.com/mark0203/ta_docs#readme"
 }
