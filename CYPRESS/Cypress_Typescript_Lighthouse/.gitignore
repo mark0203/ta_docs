@@ -1,5 +1,5 @@
 # Default ignored files
 /shelf/
-.idea
+../../.idea
 node_modules
 cypress/videos/
