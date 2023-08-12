@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@frsource/cypress-plugin-visual-regression-diff": "^3.3.10",
     "cypress": "^12.17.3",
     "typescript": "^5.1.6"
   },
