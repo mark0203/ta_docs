@@ -1,4 +1,4 @@
-describe(['all'], 'template spec', () => {
+describe('template spec', () => {
   it('passes', () => {
     cy.visit('/')
 
