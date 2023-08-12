@@ -172,6 +172,10 @@ setupNodeEvents(on, config) {
   import { initPlugin } from "@frsource/cypress-plugin-visual-regression-diff/plugins";
   ...
   ...
+    env: { //plugin settings so you don't need to set this at test level
+      pluginVisualRegressionUpdateImages: true, 
+      pluginVisualRegressionDiffConfig: { threshold: 0.01 },
+    },
     e2e: {
       baseUrl: 'https://example.cypress.io',
 
