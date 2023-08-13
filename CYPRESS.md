@@ -197,7 +197,8 @@ setupNodeEvents(on, config) {
 ## HTML validation
 
 * [HTML-Validate](https://html-validate.org/usage/cypress.html)
-    * Install: `pnpm install --save-dev html-validate cypress-html-validate`
+    * Install: `npm install --save-dev html-validate cypress-html-validate`
+        * use npm, not pnpm otherwise the run will fail
     * Configuration: Follow steps on this page:
         * https://www.npmjs.com/package/cypress-html-validate
 
