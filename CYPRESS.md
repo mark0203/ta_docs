@@ -35,7 +35,7 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
         * Create your first spec has two options `Scaffold example specs` & `Create new spec`
             * We choose `Create new spec`
                 * Give it a name e.g. `my-first-spec`
-                  Hit `Okay, run the spec` and see the magic
+                * Hit `Okay, run the spec` and see the magic
             * But to get familiar repeat this workshop in another empty propject and select the other option to see what
               will happen
 
