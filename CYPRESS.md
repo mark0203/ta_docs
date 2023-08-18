@@ -57,6 +57,7 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 
 # Cypress Examples
 
+* [Cypress.io docs - Configuration](https://docs.cypress.io/guides/references/configuration)
 * [Cypress.io docs - Introduction](https://docs.cypress.io/guides/core-concepts/introduction-To-Cypress)
 * [Cypress.io docs - Get](https://docs.cypress.io/api/commands/get)
 * [Cypress.io docs - Writing and organizing tests](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests)
@@ -83,4 +84,7 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 
 ### Lighthouse
 
-* [Cypress-Audit manual](CYPRESS/Cypress_Typescript_Lighthouse/Lighthouse.md)
+* Typescript
+    * [Cypress-Audit manual](CYPRESS/Cypress_Typescript_Lighthouse/Lighthouse.md)
+* Javascript
+    * 
