@@ -82,4 +82,4 @@ cy.lighthouse(thresholds, lighthouseOptions, lighthouseConfig);
 * Add a test,
   see [this example](https://github.com/mfrachet/cypress-audit/blob/master/examples/external-url/cypress/e2e/main.cy.js)
 * Play with the [available metrics](https://mfrachet.github.io/cypress-audit/guides/lighthouse/api-intro.html)
-* Make use of [global settings](https://mfrachet.github.io/cypress-audit/guides/lighthouse/global-api.html))
+* Make use of [global settings](https://mfrachet.github.io/cypress-audit/guides/lighthouse/global-api.html)
