@@ -84,7 +84,5 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 
 ### Lighthouse
 
-* Typescript
-    * [Cypress-Audit manual](CYPRESS/Cypress_Typescript_Lighthouse/Lighthouse.md)
-* Javascript
-    * 
+* [Cypress-Audit Typescript manual](CYPRESS/Cypress_Typescript_Lighthouse/Lighthouse.md)
+* [Cypress-Audit Javascript manual](CYPRESS/Cypress_Javascript_Lighthouse/Lighthouse.md)
