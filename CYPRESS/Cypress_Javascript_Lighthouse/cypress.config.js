@@ -1,20 +1,23 @@
-const { defineConfig } = require("cypress");
 const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
-const { pa11y } = require("@cypress-audit/pa11y");
+const fs = require("fs");
 
-module.exports = defineConfig({
+module.exports = {
   video: false,
-
   e2e: {
-    baseUrl: "https://example.cypress.io", // this is your app
+    baseUrl: "https://example.cypress.io",
     setupNodeEvents(on, config) {
       on("before:browser:launch", (browser = {}, launchOptions) => {
-        prepareAudit(launchOptions);
-      });
+          prepareAudit(launchOptions);
+        });
 
       on("task", {
-        lighthouse: lighthouse(),
-        pa11y: pa11y(console.log.bind(console)),
+        lighthouse: lighthouse((lighthouseReport) => {
+          console.log("---- Writing lighthouse report to disk ----");
+
+          fs.writeFile("lighthouse.html", lighthouseReport.report, (error) => {
+            error ? console.log(error) : console.log("Report created successfully");
+          });
+        }),
       });
     },
   },
