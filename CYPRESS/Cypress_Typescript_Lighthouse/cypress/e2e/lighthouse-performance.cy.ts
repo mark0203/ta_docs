@@ -1,20 +1,47 @@
 describe('template spec', () => {
-  it('passes', () => {
+  beforeEach(() => {
     cy.visit('/')
+  })
 
-    const customThresholds = {
-      // https://mfrachet.github.io/cypress-audit/guides/lighthouse/api-intro.html
-      performance: 50,
-      accessibility: 50,
-      seo: 70,
-      pwa: 30,
-      'first-contentful-paint': 2000,
-      'largest-contentful-paint': 3000,
-      'cumulative-layout-shift': 0.1,
-      'total-blocking-time': 500,
-      "best-practices": 100,
-    };
+  it('simplest test, no specified thresholds', () => {
+    cy.lighthouse()
+  })
 
-    cy.lighthouse(customThresholds)
+it('should test with some thresholds', () => {
+    cy.lighthouse({
+      performance: 85,
+      accessibility: 100,
+      "best-practices": 85,
+      seo: 85,
+      pwa: 100,
+    })
+  })
+
+  it('should verify the lighthouse scores ONLY for performance and first contentful paint', () => {
+    cy.lighthouse({
+      performance: 85,
+      "first-contentful-paint": 2000,
+    })
+  })
+
+  it('passes options and config to cy.lighthouse directly and outputs a HTML report ', () => {
+    const thresholds = {
+      performance: 85,
+      accessibility: 100,
+      "best-practices": 85,
+      seo: 85,
+      pwa: 100,
+    }
+
+    const lighthouseOptions = {
+      artifacts: ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'],
+    }
+
+    const lighthouseConfig = {
+      settings: { output: "html" },
+      extends: "lighthouse:default",
+    }
+
+    cy.lighthouse(thresholds, lighthouseOptions, lighthouseConfig)
   })
 })

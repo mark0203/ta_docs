@@ -8,6 +8,7 @@
     "strict": true,
     "types": [
       "cypress",
+      "@cypress-audit/lighthouse",
       "node"
     ]
   },
