@@ -3,11 +3,11 @@ describe('Different lighthouse tests', () => {
     cy.visit('/')
   })
 
-  it('simplest test, no specified thresholds', function () => {
+  it('simplest test, no specified thresholds', () => {
     cy.lighthouse()
   })
 
-  it('should test with some thresholds', function () => {
+  it('should test with some thresholds', () => {
     cy.lighthouse({
       performance: 85,
       accessibility: 100,
@@ -17,14 +17,14 @@ describe('Different lighthouse tests', () => {
     })
   })
 
-  it('should verify the lighthouse scores ONLY for performance and first contentful paint', function () {
+  it('should verify the lighthouse scores ONLY for performance and first contentful paint', () => {
     cy.lighthouse({
       performance: 85,
       "first-contentful-paint": 2000,
     });
   });
 
-  it('passes options and config to cy.lighthouse directly and outputs a HTML report ', function () => {
+  it('passes options and config to cy.lighthouse directly and outputs a HTML report ', () => {
     const thresholds = {
       performance: 85,
       accessibility: 100,
