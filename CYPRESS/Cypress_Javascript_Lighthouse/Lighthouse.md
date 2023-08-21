@@ -15,7 +15,7 @@ setupNodeEvents(on, config) {
 
   on("task", {
     lighthouse()
-  }),
+  });
 });
 ```
 
@@ -25,7 +25,7 @@ setupNodeEvents(on, config) {
 ## Reports
 
 * [Original guide](https://mfrachet.github.io/cypress-audit/guides/lighthouse/reports.html)
-* [Github cypress-audit issue 221](https://github.com/mfrachet/cypress-audit/pull/221)
+* [Github cypress-audit issue 222](https://github.com/mfrachet/cypress-audit/issues/223)
 * ["New" guide](https://github.com/mfrachet/cypress-audit/blob/master/packages/documentation/docs/guides/lighthouse/reports.md)
 
 ### Raw Reports
@@ -42,14 +42,27 @@ on("task", {
 
 ### HTML reports
 
-Or if you want HTML reports, add the `const fs = require("fs");` import and change the `on("task", {` into
+Or if you want HTML reports,
+
+* Add the `const fs = require("fs");` import
+* Add module export
+
+```Javascript
+module.exports.lighthouse = function(callback) {
+  return cy.task('lighthouse').then(lighthouseReport => {
+    callback(lighthouseReport);
+  });
+};
+```
+
+* Change the `on("task", {` into
 
 ```Javascript
 on("task", {
   lighthouse: lighthouse((lighthouseReport) => {
     console.log("---- Writing lighthouse report to disk ----");
 
-    fs.writeFile("lighthouse.html", lighthouseReport.report, (error) => {
+    fs.writeFile("lighthouse.html", lighthouseReport.report, { encoding: "utf8" }, (error) => {
       error ? console.log(error) : console.log("Report created successfully");
     });
   }),
