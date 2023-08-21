@@ -9,13 +9,14 @@ import { lighthouse, prepareAudit } from "@cypress-audit/lighthouse";
 ...
 ...
 setupNodeEvents(on, config) {
-      on("before:browser:launch", (browser = {}, launchOptions) => {
-        prepareAudit(launchOptions);
-      });
+  on("before:browser:launch", (browser = {}, launchOptions) => {
+    prepareAudit(launchOptions);
+  });
 
-      on("task", {
-        lighthouse: lighthouse(),
-      });
+  on("task", {
+    lighthouse: lighthouse(),
+  });
+});
 ```
 
 <details>
@@ -24,14 +25,14 @@ setupNodeEvents(on, config) {
 ## Reports
 
 * [Original guide](https://mfrachet.github.io/cypress-audit/guides/lighthouse/reports.html)
-* [Github cypress-audit issue 221](https://github.com/mfrachet/cypress-audit/pull/221)
+* [Github cypress-audit issue 222](https://github.com/mfrachet/cypress-audit/issues/223)
 * ["New" guide](https://github.com/mfrachet/cypress-audit/blob/master/packages/documentation/docs/guides/lighthouse/reports.md)
 
 ### Raw Reports
 
 In case you want to do something with reports, in `cypress.config.ts` change the `on("task", {` into
 
-```Javascript
+```Typescript
 on("task", {
   lighthouse: lighthouse((lighthouseReport) => {
     console.log(lighthouseReport); // raw lighthouse reports
@@ -41,14 +42,25 @@ on("task", {
 
 ### HTML reports
 
-Or if you want HTML reports, add the `import fs from "fs";` import and change the `on("task", {` into
+Or if you want HTML reports,
 
-```Javascript
+* Add the `import fs from "fs";` import
+* Add declare module
+
+```Typescript
+declare module "@cypress-audit/lighthouse" {
+  export function lighthouse(callback: (lighthouseReport: { report: string }) => void): Cypress.Task;
+}
+```
+
+* Change the `on("task", {` into
+
+```Typescript
 on("task", {
   lighthouse: lighthouse((lighthouseReport) => {
     console.log("---- Writing lighthouse report to disk ----");
 
-    fs.writeFile("lighthouse.html", lighthouseReport.report, (error: NodeJS.ErrnoException | null) => {
+    fs.writeFile("lighthouse.html", lighthouseReport.report, { encoding: "utf8" }, (error: NodeJS.ErrnoException | null) => {
       error ? console.log(error) : console.log("Report created successfully");
     });
   }),
@@ -57,7 +69,7 @@ on("task", {
 
 Change your test a bit like this
 
-```Javascript
+```Typescript
 const thresholds = {
   /* ... your lighthouse thresholds */
 };

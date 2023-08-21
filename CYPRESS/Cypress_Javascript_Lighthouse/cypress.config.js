@@ -10,7 +10,13 @@ const hour = String(currentDate.getHours()).padStart(2, '0'); // Add leading zer
 const minute = String(currentDate.getMinutes()).padStart(2, '0'); // Add leading zero if needed
 const second = String(currentDate.getSeconds()).padStart(2, '0'); // Add leading zero if needed
 
-const formattedTimestamp = `${year}-${month}-${day}_${hour}_${minute}_${second}`;
+const formattedTimestamp = `${year}-${month}-${day}_${hour}h${minute}m${second}s`;
+
+module.exports.lighthouse = function(callback) {
+  return cy.task('lighthouse').then(lighthouseReport => {
+    callback(lighthouseReport);
+  });
+};
 
 module.exports = {
   video: false,
@@ -25,7 +31,7 @@ module.exports = {
         lighthouse: lighthouse((lighthouseReport) => {
           console.log("---- Writing lighthouse report to disk ----");
 
-          fs.writeFile(`lighthouse_${formattedTimestamp}.html`, lighthouseReport.report, (error) => {
+          fs.writeFile(`lighthouse_${formattedTimestamp}.html`, lighthouseReport.report, { encoding: "utf8" }, (error) => {
             error ? console.log(error) : console.log("Report created successfully");
           });
         }),

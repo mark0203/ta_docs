@@ -18,6 +18,15 @@ Just remember to use `pnpm` instead of `npm` for every installation part in the 
   "include": ["**/*.ts"]
 }
 ```
+> **Note**
+> You may have to restart your IDE's TypeScript server if the setup above 
+> does not appear to work. For example:
+> 
+> VS Code (within a .ts or .js file):
+> 
+> Open the command palette (Mac: cmd+shift+p, Windows: ctrl+shift+p)
+> Type "restart ts" and select the "TypeScript: Restart TS server." option
+> If that does not work, try restarting the IDE.
 
 * Rename the e2e spec from `*.cy.js` to `*.cy.ts`
 * Rename the support files to `*.ts` files

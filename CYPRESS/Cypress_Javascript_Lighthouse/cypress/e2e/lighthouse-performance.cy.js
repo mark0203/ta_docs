@@ -7,14 +7,24 @@ describe('Different lighthouse tests', () => {
     cy.lighthouse()
   })
 
-  it('should test with some thresholds', () => {
+  it('should test with some thresholds and a desktop config', () => {
     cy.lighthouse({
       performance: 85,
       accessibility: 100,
       "best-practices": 85,
       seo: 85,
       pwa: 100,
-    })
+    },
+    {
+      formFactor: "desktop",
+      screenEmulation: {
+        width: 1350,
+        height: 940,
+        deviceScaleRatio: 1,
+        mobile: false,
+        disable: false,
+      },
+    },)
   })
 
   it('should verify the lighthouse scores ONLY for performance and first contentful paint', () => {
@@ -24,7 +34,7 @@ describe('Different lighthouse tests', () => {
     });
   });
 
-  it('passes options and config to cy.lighthouse directly and outputs a HTML report ', () => {
+  it('should pass options and config to cy.lighthouse directly and outputs a HTML report ', () => {
     const thresholds = {
       performance: 85,
       accessibility: 100,
@@ -34,7 +44,14 @@ describe('Different lighthouse tests', () => {
     };
 
     const lighthouseOptions = {
-      artifacts: ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'],
+      formFactor: "desktop",
+      screenEmulation: {
+        width: 1350,
+        height: 940,
+        deviceScaleRatio: 1,
+        mobile: false,
+        disable: false,
+      },
     };
 
     const lighthouseConfig = {
