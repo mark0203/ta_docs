@@ -86,3 +86,13 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 
 * [Cypress-Audit Typescript manual](CYPRESS/Cypress_Typescript_Lighthouse/Lighthouse.md)
 * [Cypress-Audit Javascript manual](CYPRESS/Cypress_Javascript_Lighthouse/Lighthouse.md)
+
+## Accessibility testing (A11y)
+
+### Cypress-Axe
+
+* [Cypress-Axe manual](CYPRESS/Cypress_Typescript_Axe/Cypress-Axe.md)
+
+## Console Error Validation
+
+* [Cypress fail on console error manual](CYPRESS/Cypress_Typescript_Fail_On_Console_Error/Cypress_Fail_On_Console_Error.md)

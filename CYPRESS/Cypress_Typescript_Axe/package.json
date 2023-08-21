@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "axe-core": "^4.7.2",
+    "cypress": "^12.17.3",
+    "cypress-axe": "^1.4.0",
+    "typescript": "^5.1.6"
+  },
+  "name": "ta_docs",
+  "description": "This repo is used to document a bunch of test automation tools.\r The documentation is written in such a way anyone should be able to follow it.\r From installation to usage. Links to the original documentation. \r And even example code to test against (if needed).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark0203/ta_docs.git"
+  },
+  "author": "Mark Duivesteijn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mark0203/ta_docs/issues"
+  },
+  "homepage": "https://github.com/mark0203/ta_docs#readme"
+}
