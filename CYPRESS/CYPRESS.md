@@ -53,7 +53,7 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 
 # Typescript
 
-* [Convert Javascript to Typescript manual](CYPRESS/Cypress_Typescript_empty_framework/Typescript.md)
+* [Convert Javascript to Typescript manual](Cypress_Typescript_empty_framework/Typescript.md)
 
 # Cypress Examples
 
@@ -70,29 +70,29 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 
 ## Visual Regression Testing
 
-* [Visual-regression manual](CYPRESS/Cypress_Typescript_Visual_Regression/Visual-regression.md)
+* [Visual-regression manual](Cypress_Typescript_Visual_Regression/Visual-regression.md)
 
 ## Test Tags
 
-* [Cypress-Tags manual](CYPRESS/Cypress_Typescript_Tags/Tags.md)
+* [Cypress-Tags manual](Cypress_Typescript_Tags/Tags.md)
 
 ## HTML validation
 
-* [HTML-validation manual](CYPRESS/Cypress_Typescript_HTML_validation/HTML-validation.md)
+* [HTML-validation manual](Cypress_Typescript_HTML_validation/HTML-validation.md)
 
 ## Performance tests
 
 ### Lighthouse
 
-* [Cypress-Audit Typescript manual](CYPRESS/Cypress_Typescript_Lighthouse/Lighthouse.md)
-* [Cypress-Audit Javascript manual](CYPRESS/Cypress_Javascript_Lighthouse/Lighthouse.md)
+* [Cypress-Audit Typescript manual](Cypress_Typescript_Lighthouse/Lighthouse.md)
+* [Cypress-Audit Javascript manual](Cypress_Javascript_Lighthouse/Lighthouse.md)
 
 ## Accessibility testing (A11y)
 
 ### Cypress-Axe
 
-* [Cypress-Axe manual](CYPRESS/Cypress_Typescript_Axe/Cypress-Axe.md)
+* [Cypress-Axe manual](Cypress_Typescript_Axe/Cypress-Axe.md)
 
 ## Console Error Validation
 
-* [Cypress fail on console error manual](CYPRESS/Cypress_Typescript_Fail_On_Console_Error/Cypress_Fail_On_Console_Error.md)
+* [Cypress fail on console error manual](Cypress_Typescript_Fail_On_Console_Error/Cypress_Fail_On_Console_Error.md)

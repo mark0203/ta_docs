@@ -7,9 +7,8 @@ And even example code to test against (if needed).
 
 ## Cypress
 
-[CYPRESS.md](CYPRESS.md)
+[CYPRESS.md](CYPRESS/CYPRESS.md)
 
-# Todo
+## Ruby
 
-splitup each example into a different folder with it's own cypress configuration.
-See https://github.com/mfrachet/cypress-audit/tree/master/examples
+[RUBY.md](RUBY/RUBY.md)
