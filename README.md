@@ -9,6 +9,10 @@ And even example code to test against (if needed).
 
 [CYPRESS.md](CYPRESS/CYPRESS.md)
 
+## Playwright
+
+[PLAYWRIGHT.md](PLAYWRIGHT/PLAYWRIGHT.md)
+
 ## Ruby
 
 [RUBY.md](RUBY/RUBY.md)
