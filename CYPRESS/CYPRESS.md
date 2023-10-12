@@ -21,9 +21,6 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
 # Init and first run
 
 * Open a terminal
-* run `npm init`
-    * Walk through the steps
-* Follow: https://docs.cypress.io/guides/getting-started/opening-the-app
 * Run `npx cypress open`
     * Windows Firewall Pop-up: `Allow Access`
 * If everything went well you will see a Cypress Window asking `E2E Testing` / `Component Testing`
@@ -33,10 +30,11 @@ Cypress is a test automation tool that make testing fairly easy. Here is what yo
         * Click `Continue`
     * Select a browser (you will only see locally installed browsers) and hit `Start E2E Testing in ....`
         * Create your first spec has two options `Scaffold example specs` & `Create new spec`
+            * If you choose `Scaffold example specs` you do get a bunch of examples to play with
             * We choose `Create new spec`
                 * Give it a name e.g. `my-first-spec`
                 * Hit `Okay, run the spec` and see the magic
-            * But to get familiar repeat this workshop in another empty propject and select the other option to see what
+            * But to get familiar repeat this workshop in another empty project and select the other option to see what
               will happen
 
 # Usage & What's next
