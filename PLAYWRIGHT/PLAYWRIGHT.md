@@ -15,4 +15,10 @@
 
 ## Typescript
 
+* `pnpm create playwright`
+* Language? >> `Typescript`
+* Where to put your end-to-end tests? >> `tests`
+* Add a Github Actions workflow? (y/N) >> `false`
+* Install Playwright browsers (can be done manually via 'pnpm exec playwright install')? (Y/n) >> `true`
+
 ## Python
