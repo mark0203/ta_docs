@@ -22,3 +22,22 @@
 * Install Playwright browsers (can be done manually via 'pnpm exec playwright install')? (Y/n) >> `true`
 
 ## Python
+
+## Axe
+
+### Install
+
+Even though not mentioned in the official docs page `https://playwright.dev/docs/accessibility-testing`
+You do need to install axe-core before you can use it.
+
+#### npm
+
+```bash
+npm install @axe-core/playwright
+```
+
+#### pnpm
+
+```bash
+pnpm install @axe-core/playwright
+```
