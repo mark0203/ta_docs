@@ -13,6 +13,10 @@ And even example code to test against (if needed).
 
 [PLAYWRIGHT.md](PLAYWRIGHT/PLAYWRIGHT.md)
 
+## Selenium
+
+[SELENIUM.md](SELENIUM/SELENIUM.md)
+
 ## Ruby
 
 [RUBY.md](RUBY/RUBY.md)
