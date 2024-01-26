@@ -1,6 +1,6 @@
 {
-  "name": "Playwright_Typescript_empty_framework",
-  "version": "1.0.0",
+  "name": "Playwright_Typescript",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -10,5 +10,8 @@
   "devDependencies": {
     "@playwright/test": "^1.41.0",
     "@types/node": "^20.11.5"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.8.3"
   }
 }
