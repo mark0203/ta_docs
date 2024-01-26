@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }, testInfo) => {
     await page.goto('https://playwright.dev/');
