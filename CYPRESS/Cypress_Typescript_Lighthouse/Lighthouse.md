@@ -6,7 +6,11 @@
 
 ```Typescript
 import { lighthouse, prepareAudit } from "@cypress-audit/lighthouse";
-...
+
+/* This declaration is missing in the @cypress-audit/lighthouse package */
+declare module "@cypress-audit/lighthouse" {
+    export function lighthouse(callback: (lighthouseReport: { report: string }) => void): Cypress.Task;
+}
 ...
 setupNodeEvents(on, config) {
   on("before:browser:launch", (browser = {}, launchOptions) => {
