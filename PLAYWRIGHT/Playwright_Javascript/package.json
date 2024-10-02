@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.41.0"
+    "@playwright/test": "^1.47.2"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.8.3"
