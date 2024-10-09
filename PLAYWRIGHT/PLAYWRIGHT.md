@@ -4,6 +4,9 @@
 
 * [https://playwright.dev/](https://playwright.dev/)
 * [Intro](https://playwright.dev/docs/intro)
+* [Best Practices](https://playwright.dev/docs/best-practices)
+* [Generate tests with the VS Code Extension](https://www.youtube.com/watch?v=5XIZPqKkdBA)
+* [Run tests with the VS Code Extension](https://www.youtube.com/watch?v=mQmcIBMsc38)
 
 ## Javascript
 ### Installation
