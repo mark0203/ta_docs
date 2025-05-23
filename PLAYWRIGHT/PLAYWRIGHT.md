@@ -53,6 +53,17 @@ Don't confuse with `.toMatchSnapshot()` which ins only to compare text or arbitr
 And there is also the `.screenshot()` function which can be used to capture screenshots during your tests.
 Although I've so far only used `.toHaveScreenshot()` since that served the intended purpose.
 
+### Run via docker (Windows)
+If you want to run a visual regression via a CI/CD pipeline (like gitlab), you can't use the images that have been rendered on your local (Windows) machine.
+
+Each OS + Browser combination renderes different. In my setup I run via docker/gitlab so to create images that work in the pipeline, I need to created the images via docker as well.
+- Install WSL (might need a reboot of your machine)
+- Install Docker
+- Look at [Dockerfile](Playwright_Typescript/Dockerfile)
+- Look at [docker-compose.yaml](Playwright_Typescript/docker-compose.yaml)
+- Look at [The test with tag @docker](Playwright_Typescript/tests/toHaveScreenshotExample.spec.ts)
+- Run `docker-compose up --build visualtests` 
+
 ## Axe
 
 ### Install

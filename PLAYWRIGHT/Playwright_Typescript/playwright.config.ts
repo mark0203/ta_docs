@@ -11,6 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+  snapshotPathTemplate: "__snapshots__/{testFilePath}/{arg}-{platform}-{projectName}-{ext}",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -28,8 +29,15 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    video: 'on-first-retry',
+    screenshot: { mode: "on-first-failure", fullPage: true },
+    ignoreHTTPSErrors: true,
   },
 
+  expect: {
+    toHaveScreenshot: { maxDiffPixelRatio: 0.05, threshold: 0.2, animations: "disabled" },
+  },
+  
   /* Configure projects for major browsers */
   projects: [
     {

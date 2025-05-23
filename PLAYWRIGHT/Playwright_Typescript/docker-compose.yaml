@@ -1,0 +1,12 @@
+services:
+  visualtests:
+    container_name: playwright
+    build:
+      context: .
+    volumes:
+      - ./tests:/app/tests
+      - ./__snapshots__:/app/__snapshots__
+      - ./playwright.config.ts:/app/playwright.config.ts
+      - ./playwright-report:/app/playwright-report
+    command: npx -y playwright test --grep @visual --workers=4
+    working_dir: /app
