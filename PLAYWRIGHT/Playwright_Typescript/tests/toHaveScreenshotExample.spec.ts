@@ -4,11 +4,11 @@ test.beforeEach(async ({ page }, testInfo) => {
     await page.goto('https://playwright.dev/');
 });
 
-test('Page matches screenshot', async ({ page }) => {
-    await expect(page).toHaveScreenshot('page.png');
+test('Page matches screenshot',{  tag: '@visual', }, async ({ page }) => {
+    await expect(page).toHaveScreenshot();
 });
 
-test('Footer matches screenshot', async ({ page }) => {
+test('Footer matches screenshot', {  tag: '@visual', }, async ({ page }) => {
     const locator = page.locator('footer');
     await locator.scrollIntoViewIfNeeded();
     await expect(locator).toBeVisible();
